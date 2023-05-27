@@ -14,8 +14,8 @@ esac
 OS_ARCH=$(uname -m)
 case "${OS_ARCH}" in
     x86_64*)    OS_ARCH="64";;
-    arm64*)     OS_ARCH="arm64";;
-    aarch64*)     OS_ARCH="arm64";;
+    arm64*)     OS_ARCH="aarch64";;
+    aarch64*)     OS_ARCH="aarch64";;
     *)          echo "Unknown system architecture: $OS_ARCH! This script runs only on x86_64 or arm64" && exit
 esac
 
@@ -23,7 +23,6 @@ if ! which curl &> /dev/null; then fail "'curl' not found. Please install curl."
 if ! which tar &> /dev/null; then fail "'tar' not found. Please install tar."; fi
 if ! which bzip2 &> /dev/null; then fail "'bzip2' not found. Please install bzip2."; fi
 if ! which git &> /dev/null; then fail "'git' not found. Please install git."; fi
-
 
 if pwd | grep ' '
     then
