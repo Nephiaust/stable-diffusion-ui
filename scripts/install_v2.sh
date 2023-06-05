@@ -188,7 +188,7 @@ fi
 if [ -e $INSTALL_ENV_DIR ]
     then
         echo " * Runtime environment set up and ready"
-        export PATH="$(INSTALL_ENV_DIR)/bin:$PATH"
+        export PATH="$INSTALL_ENV_DIR/bin:$PATH"
     else
         fail "Missing runtime environment"
 fi
@@ -202,7 +202,7 @@ echo ""
 
 cd $INSTALL_DIR
 
-export PYTHONPATH=$(INSTALL_DIR)/installer_files/env/lib/python3.8/site-packages:$(INSTALL_DIR)/stable-diffusion/env/lib/python3.8/site-packages
+export PYTHONPATH=$INSTALL_DIR/installer_files/env/lib/python3.8/site-packages:$INSTALL_DIR/stable-diffusion/env/lib/python3.8/site-packages
 
 
 if [ -f "scripts/get_config.py" ]; then
