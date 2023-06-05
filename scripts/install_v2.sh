@@ -215,7 +215,8 @@ fi
 
 if [ -f "scripts/install_status.txt" ] && [ `grep -c sd_ui_git_cloned scripts/install_status.txt` -gt "0" ]; then
     echo "Easy Diffusion's git repository was already installed. Updating from $update_branch.."
-
+    mkdir scripts
+    
     cd sd-ui-files
 
     git reset --hard
