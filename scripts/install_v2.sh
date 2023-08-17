@@ -87,7 +87,6 @@ Thanks!
 EOF
     read -p "Press any key to continue"
     exit 1
-
 }
 
 filesize() {
@@ -206,7 +205,7 @@ export PYTHONPATH=$INSTALL_DIR/installer_files/env/lib/python3.8/site-packages:$
 
 
 if [ -f "scripts/get_config.py" ]; then
-   export update_branch="$( python scripts/get_config.py --default=main update_branch )"
+    export update_branch="$( python scripts/get_config.py --default=main update_branch )"
 fi
 
 if [ "$update_branch" == "" ]; then
